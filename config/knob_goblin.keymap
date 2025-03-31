@@ -37,11 +37,11 @@
         knobgoblinhardware {
             display-name = "KnobGoblinSystem";
             bindings = <
-&trans  &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2
-&trans  &kp HOME        &trans          &kp PAGE_UP      &trans
-&trans  &kp END         &kp UP_ARROW    &kp PAGE_DOWN    &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SPACE
-&trans  &to 0           &kp BACKSPACE   &kp DELETE       &trans
+&trans  &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+&trans  &studio_unlock  &sys_reset    &trans        &trans
+&trans  &trans          &trans        &trans        &trans
+&trans  &trans          &trans        &trans        &trans
+&trans  &to 0           &trans        &trans        &trans
             >;
         };
 
