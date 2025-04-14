@@ -1,7 +1,9 @@
+include <physical_layouts.dtsi>
+
 / {
-    default: default {
+    knobgoblin_macropad_layout: knobgoblin_macropad_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Default";
+        display-name = "KnobGoblin Macropad";
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100  120    0       0     0     0>
@@ -27,14 +29,5 @@
             , <&key_physical_attrs 100 100  420  400       0     0     0>
             , <&key_physical_attrs 100 100    0  380       0     0     0>
             ;
-    };
-
-    position_map {
-        compatible = "zmk,physical-layout-position-map";
-
-        default {
-            physical-layout = <&default>;
-            positions = <>;
-        };
     };
 };
