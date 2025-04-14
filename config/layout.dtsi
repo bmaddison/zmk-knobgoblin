@@ -1,0 +1,40 @@
+/ {
+    default: default {
+        compatible = "zmk,physical-layout";
+        display-name = "Default";
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  120    0       0     0     0>
+            , <&key_physical_attrs 100 100  220    0       0     0     0>
+            , <&key_physical_attrs 100 100  320    0       0     0     0>
+            , <&key_physical_attrs 100 100  420    0       0     0     0>
+            , <&key_physical_attrs 100 100  120  100       0     0     0>
+            , <&key_physical_attrs 100 100  220  100       0     0     0>
+            , <&key_physical_attrs 100 100  320  100       0     0     0>
+            , <&key_physical_attrs 100 100  420  100       0     0     0>
+            , <&key_physical_attrs 100 100  120  200       0     0     0>
+            , <&key_physical_attrs 100 100  220  200       0     0     0>
+            , <&key_physical_attrs 100 100  320  200       0     0     0>
+            , <&key_physical_attrs 100 100  420  200       0     0     0>
+            , <&key_physical_attrs 100 100  120  300       0     0     0>
+            , <&key_physical_attrs 100 100  220  300       0     0     0>
+            , <&key_physical_attrs 100 100  320  300       0     0     0>
+            , <&key_physical_attrs 100 100  420  300       0     0     0>
+            , <&key_physical_attrs 100 100    0  250       0     0     0>
+            , <&key_physical_attrs 100 100  120  400       0     0     0>
+            , <&key_physical_attrs 100 100  220  400       0     0     0>
+            , <&key_physical_attrs 100 100  320  400       0     0     0>
+            , <&key_physical_attrs 100 100  420  400       0     0     0>
+            , <&key_physical_attrs 100 100    0  380       0     0     0>
+            ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        default {
+            physical-layout = <&default>;
+            positions = <>;
+        };
+    };
+};
