@@ -1,0 +1,235 @@
+{
+  "id": "knob_goblin",
+  "name": "KnobGoblin",
+  "displayName": "KnobGoblin",
+  "manufacturer": "Custom",
+  "description": "A custom macropad with 19 keys and 2 rotary encoders. Top encoder controls Delete/Backspace with Play/Pause click, bottom encoder controls volume with Mute click.",
+  "url": "",
+  "version": "1.0.0",
+  "matrix": {
+    "rows": 5,
+    "cols": 5
+  },
+  "layouts": {
+    "default": {
+      "description": "Default KnobGoblin layout",
+      "labels": [
+        "Esc", "S+C+3", "S+C+4", "S+C+5",
+        "C+C", "C+V", "Bspc", "Del",
+        "C+Z", "A+PgUp", "Enter", "PgDn",
+        "Play", "Ins", "A+Left", "Up", "A+Right",
+        "Mute", "NumPad", "Left", "Down", "Right"
+      ],
+      "keys": [
+        {
+          "x": 0,
+          "y": 0,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "row": 1,
+          "col": 0
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "row": 3,
+          "col": 3
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "row": 4,
+          "col": 0
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "row": 4,
+          "col": 1
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "row": 4,
+          "col": 2
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "row": 4,
+          "col": 3
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "row": 4,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "encoders": [
+    {
+      "x": 4.5,
+      "y": 0.5,
+      "resolution": 4,
+      "rotation": "clockwise",
+      "click": true,
+      "clickAction": "C_PLAY_PAUSE"
+    },
+    {
+      "x": 4.5,
+      "y": 1.5,
+      "resolution": 4,
+      "rotation": "clockwise",
+      "click": true,
+      "clickAction": "C_MUTE"
+    }
+  ],
+  "customBehaviors": [
+    {
+      "id": "studio_unlock",
+      "name": "Studio Unlock",
+      "description": "Custom behavior for ZMK Studio configuration"
+    }
+  ],
+  "layers": {
+    "base": {
+      "displayName": "Base",
+      "keymap": [
+        "&kp ESCAPE", "&kp LS(LG(N3))", "&kp LS(LG(NUMBER_4))", "&kp LS(LG(NUMBER_5))",
+        "&kp LG(C)", "&kp LG(V)", "&kp BACKSPACE", "&kp DELETE",
+        "&kp LG(Z)", "&kp LA(PAGE_UP)", "&kp ENTER", "&kp PAGE_DOWN",
+        "&kp C_PLAY_PAUSE", "&kp INS", "&kp LA(LEFT)", "&kp UP", "&kp RA(RIGHT)",
+        "&kp C_MUTE", "&to 1", "&kp LEFT", "&kp DOWN", "&kp RIGHT"
+      ],
+      "encoder-bindings": [
+        ["DELETE", "BACKSPACE"],
+        ["C_VOLUME_UP", "C_VOLUME_DOWN"]
+      ]
+    },
+    "numpad": {
+      "displayName": "Numpad",
+      "keymap": [
+        "&kp LPAR", "&kp RPAR", "&kp CARET", "&kp KP_SLASH",
+        "&kp KP_N7", "&kp KP_N8", "&kp KP_N9", "&kp KP_MULTIPLY",
+        "&kp KP_N4", "&kp KP_N5", "&kp KP_N6", "&kp KP_MINUS",
+        "&trans", "&kp KP_N1", "&kp KP_N2", "&kp KP_N3", "&kp KP_PLUS",
+        "&trans", "&to 2", "&kp KP_N0", "&kp DOT", "&kp KP_ENTER"
+      ],
+      "inherit_encoders": true
+    },
+    "knobgoblinhardware": {
+      "displayName": "KnobGoblinSystem",
+      "keymap": [
+        "&bt BT_CLR", "&bt BT_SEL 0", "&bt BT_SEL 1", "&bt BT_SEL 2",
+        "&studio_unlock", "&sys_reset", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&to 0", "&trans", "&trans", "&trans"
+      ],
+      "inherit_encoders": true
+    },
+    "layer4": {
+      "displayName": "Reserved Layer",
+      "status": "reserved",
+      "keymap": [
+        "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans", "&trans",
+        "&trans", "&trans", "&trans", "&trans", "&trans"
+      ],
+      "inherit_encoders": true
+    }
+  }
+}
+

@@ -9,6 +9,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        studio_unlock: studio_unlock {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "STUDIO_UNLOCK";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LS(Z)))>;
+            description = "Behavior that enables ZMK Studio configuration mode";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
