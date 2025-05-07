@@ -1,33 +1,44 @@
 #include <physical_layouts.dtsi>
 
 / {
-    knobgoblin_macropad_layout: knobgoblin_macropad_layout {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "KnobGoblin Macropad";
+        display-name = "Bill's ZMK KnobGoblin";
+        kscan = <&kscan0>;
+        transform = <&matrix_transform0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100  120    0       0     0     0>
-            , <&key_physical_attrs 100 100  220    0       0     0     0>
-            , <&key_physical_attrs 100 100  320    0       0     0     0>
-            , <&key_physical_attrs 100 100  420    0       0     0     0>
-            , <&key_physical_attrs 100 100  120  100       0     0     0>
-            , <&key_physical_attrs 100 100  220  100       0     0     0>
-            , <&key_physical_attrs 100 100  320  100       0     0     0>
-            , <&key_physical_attrs 100 100  420  100       0     0     0>
-            , <&key_physical_attrs 100 100  120  200       0     0     0>
-            , <&key_physical_attrs 100 100  220  200       0     0     0>
-            , <&key_physical_attrs 100 100  320  200       0     0     0>
-            , <&key_physical_attrs 100 100  420  200       0     0     0>
-            , <&key_physical_attrs 100 100  120  300       0     0     0>
-            , <&key_physical_attrs 100 100  220  300       0     0     0>
-            , <&key_physical_attrs 100 100  320  300       0     0     0>
-            , <&key_physical_attrs 100 100  420  300       0     0     0>
-            , <&key_physical_attrs 100 100    0  250       0     0     0>
-            , <&key_physical_attrs 100 100  120  400       0     0     0>
-            , <&key_physical_attrs 100 100  220  400       0     0     0>
-            , <&key_physical_attrs 100 100  320  400       0     0     0>
-            , <&key_physical_attrs 100 100  420  400       0     0     0>
-            , <&key_physical_attrs 100 100    0  380       0     0     0>
+            = <&key_physical_attrs 100 100  100    0       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300    0       0     0     0>
+            , <&key_physical_attrs 100 100  400    0       0     0     0>
+            , <&key_physical_attrs 100 100  100  100       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  100       0     0     0>
+            , <&key_physical_attrs 100 100  400  100       0     0     0>
+            , <&key_physical_attrs 100 100  100  200       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100  300  200       0     0     0>
+            , <&key_physical_attrs 100 100  400  200       0     0     0>
+            , <&key_physical_attrs 100 100  100  300       0     0     0>
+            , <&key_physical_attrs 100 100  200  300       0     0     0>
+            , <&key_physical_attrs 100 100  300  300       0     0     0>
+            , <&key_physical_attrs 100 100  400  300       0     0     0>
+            , <&key_physical_attrs 100 100    0  300       0     0     0>
+            , <&key_physical_attrs 100 100  100  400       0     0     0>
+            , <&key_physical_attrs 100 100  200  400       0     0     0>
+            , <&key_physical_attrs 100 100  300  400       0     0     0>
+            , <&key_physical_attrs 100 100  400  400       0     0     0>
+            , <&key_physical_attrs 100 100    0  400       0     0     0>
             ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        physical_layout0 {
+            physical-layout = <&physical_layout0>;
+            positions = <>;
+        };
     };
 };
